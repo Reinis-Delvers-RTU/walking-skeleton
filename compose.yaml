@@ -6,3 +6,13 @@ services:
       - ./server:/app
     ports:
       - 8000:8000
+    
+  client:
+    build: client
+    restart: unless-stopped
+    volumes:
+      - ./client:/app
+    ports:
+      - 4321:4321
+    depends_on:
+      - server
