@@ -1,4 +1,4 @@
-FROM denoland/deno:alpine-2.0.2
+FROM denoland/deno:alpine-2.5.2
 
 WORKDIR /app
 
@@ -8,4 +8,4 @@ RUN DENO_FUTURE=1 deno install --allow-scripts
 
 COPY . .
 
-CMD ["deno", "task", "dev", "--host"]
+CMD ["task", "dev", "--host"]
