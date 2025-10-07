@@ -17,4 +17,10 @@ services:
       - server
     environment:
       - CHOKIDAR_USEPOLLING=true
-    
+  k6-tests:
+    entrypoint: '/bin/true'
+    build: k6-tests
+    volumes:
+      - ./k6-tests/tests:/tests
+    depends_on:
+      - client
