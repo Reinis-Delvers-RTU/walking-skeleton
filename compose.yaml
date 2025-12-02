@@ -51,3 +51,9 @@ services:
     volumes:
       - ./database-migrations:/flyway/sql
     command: -connectRetries=60 -baselineOnMigrate=true migrate
+
+  redis:
+    image: redis:7.4.2
+    command: redis-server /RTU/Annas/walking-skeleton/redis/redis.conf
+    volumes:
+      - ./redis/redis.conf:/RTU/Annas/walking-skeleton/redis/redis.conf
