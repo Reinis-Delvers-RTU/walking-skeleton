@@ -9,6 +9,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.13.10"
+    "@astrojs/svelte": "^7.2.5",
+    "@deno/astro-adapter": "^0.3.2",
+    "astro": "^5.13.10",
+    "svelte": "^5.53.3"
   }
 }
